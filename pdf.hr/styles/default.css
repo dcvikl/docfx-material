@@ -1072,7 +1072,7 @@ table th {
     text-transform: uppercase;
     font-size: 12pt;
     font-weight: bold;
-    border-radius: 4px 4px 0 0;
+    border-radius: 0;
     /* line-height: 24pt;
     vertical-align: middle; */
 }
@@ -1228,3 +1228,31 @@ table.enumfields tbody tr td {
 .lang-cpp, .lang-vb, .lang-javascript {
     display: none;
 }
+
+h1::before,
+h2::before,
+h3::before,
+h4::before,
+h5::before,
+h6::before
+    {
+        content:".";
+        color: transparent;
+        display: table;
+        page-break-before: auto;
+        page-break-after: avoid;
+    }
+
+h1 + p,
+h2 + p,
+h3 + p,
+h4 + p,
+h5 + p,
+h6 + p,
+h1 + h2,
+h1 + h2 + h3,
+h2 + h3,
+h2 + h3 + h4
+    {
+        page-break-before: avoid;
+    }
