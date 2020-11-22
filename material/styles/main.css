@@ -1,12 +1,22 @@
+@import url("material-icons-sharp.css");
+
+/* Material Icons */
+.material-icons{
+  position: relative;
+  top: -1pt;
+  /*padding-left: 2pt;*/
+  vertical-align: middle;
+}
+
 /* COLOR VARIABLES*/
 :root {
-  --header-bg-color: #0d47a1;
-  --header-ft-color: #fff;
-  --highlight-light: #5e92f3;
-  --highlight-dark: #003c8f;
-  --accent-dim: #e0e0e0;
-  --accent-super-dim: #f3f3f3;
-  --font-color: #34393e;
+  --header-bg-color: rgb(13, 71, 161);
+  --header-ft-color: rgb(255, 255, 255);
+  --highlight-light: rgb(94, 146, 243);
+  --highlight-dark: rgb(0, 60, 143);
+  --accent-dim: rgb(224, 224, 224);
+  --accent-super-dim: rgb(243, 243, 243);
+  --font-color: rgb(52, 57, 62);
   --card-box-shadow: 0 1px 2px 0 rgba(61, 65, 68, 0.06), 0 1px 3px 1px rgba(61, 65, 68, 0.16);
   --search-box-shadow: 0 1px 2px 0 rgba(41, 45, 48, 0.36), 0 1px 3px 1px rgba(41, 45, 48, 0.46);
   --transition: 350ms;
@@ -14,7 +24,7 @@
 
 body {
   color: var(--font-color);
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   line-height: 1.5;
   font-size: 16px;
   -ms-text-size-adjust: 100%;
@@ -36,6 +46,10 @@ a:hover,
 a:focus {
   color: var(--highlight-light);
   text-decoration: none;
+}
+
+.toc-filter > input{
+  width: 80%;
 }
 
 .toc .nav > li.active > a {
@@ -80,23 +94,59 @@ h3 {
   font-size: 20px;
   line-height: 1.8;
 }
+h4 {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.8;
+}
 
 h5 {
-  font-size: 14px;
-  padding: 10px 0px;
+  font-size: 16px;
+  line-height: 1.8;
 }
 
 article h1,
 article h2,
 article h3,
-article h4 {
-  margin-top: 35px;
-  margin-bottom: 15px;
+article h4,
+article h5 {
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
-article h4 {
+article h1,
+article h2,
+article h3,
+article h4,
+article h5 {
+  margin-top: 35px;
+  margin-bottom: 15px;
   padding-bottom: 8px;
-  border-bottom: 2px solid #ddd;
+  border-bottom: 2px solid rgb(221, 221, 221);
+}
+
+/* TABLES */
+.table-bordered, .table-bordered > tbody > tr > td, .table-bordered > tbody > tr > th, .table-bordered > tfoot > tr > td, .table-bordered > tfoot > tr > th, .table-bordered > thead > tr > td, .table-bordered > thead > tr > th{
+  border-top-color: rgb(221, 221, 221);
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-right-color: rgb(221, 221, 221);
+  border-right-style: solid;
+  border-right-width: 0px;
+  border-bottom-color: rgb(221, 221, 221);
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-left-color: rgb(221, 221, 221);
+  border-left-style: solid;
+  border-left-width: 0px;
+  border-image-outset: 0;
+  border-image-repeat: stretch;
+  border-image-slice: 100%;
+  border-image-source: none;
+  border-image-width: 1;
+}
+
+thead,th{
+  font-family: 'Roboto Condensed',sans-serif;
 }
 
 /* NAVBAR */
@@ -254,22 +304,59 @@ article h4 {
   border-radius: 4px 4px 0 0;
 }
 
+.alert h5:before {
+  display:inline-block;
+  font-family:'Material Icons Sharp';
+  font-size: 24pt;
+  vertical-align: text-bottom;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  margin-right: 5px;
+  font-weight: normal;
+}
+
+.alert-info h5:before {
+  content:"\e88e"
+}
+
+.alert-warning h5:before {
+  content:"\e8b2"
+}
+
+.alert-danger h5:before {
+  content:"\e160"
+}
+
+.IMPORTANT h5:before {
+  content:"\e031"
+}
+
+.TIP h5:before {
+  content:"\e925"
+}
+
 .alert-info > h5 {
-  color: #1976d2;
-  border-bottom: 4px solid #1976d2;
-  background-color: #e3f2fd;
+  color: rgb(25, 118, 210);
+  border-bottom: 4px solid rgb(25, 118, 210);
+  background-color: rgb(227, 242, 253);
 }
 
 .alert-warning > h5 {
-  color: #f57f17;
-  border-bottom: 4px solid #f57f17;
-  background-color: #fff3e0;
+  color: rgb(245, 127, 23);
+  border-bottom: 4px solid rgb(245, 127, 23);
+  background-color: rgb(255, 243, 224);
 }
 
 .alert-danger > h5 {
-  color: #d32f2f;
-  border-bottom: 4px solid #d32f2f;
-  background-color: #ffebee;
+  color: rgb(180, 20, 20);
+  border-bottom: 4px solid rgb(180, 20, 20);
+  background-color: rgb(255, 235, 238);
+}
+
+.TIP > h5{
+  color: rgb(25, 140, 15);
+  border-bottom: 4px solid rgb(25, 140, 15);
+  background-color: rgb(235, 255, 236);
 }
 
 /* CODE HIGHLIGHT */
@@ -283,6 +370,27 @@ pre {
   border-radius: 4px;
   border: none;
   box-shadow: var(--card-box-shadow);
+}
+
+code {
+  font-family: 'Roboto Mono', monospace;
+}
+
+kbd, pre, samp {
+  font-family: 'Roboto Slab', monospace;
+}
+
+kbd {
+  color: rgb(255, 255, 255);
+  background-color: rgb(51, 51, 51);
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 -1px 0 rgba(0,0,0,.25);
+  box-shadow: inset 0 -1px 0 rgba(0,0,0,.25);
+}
+
+code, kbd {
+	padding: 4px 8px;
+	font-size: 90%;
 }
 
 /* STYLE FOR IMAGES */
@@ -303,4 +411,96 @@ pre {
   margin-top: 15px;
   box-shadow: var(--card-box-shadow);
   max-width: 700px;
+}
+
+@media print {
+
+/* ALERTS */
+.NOTE, .WARNING, .TIP, .IMPORTANT, .CAUTION {
+    padding: 0px 0px 5px 0px;
+    color: inherit;
+    background-color: inherit;
+    border: none;
+    box-shadow: var(--card-box-shadow);
+}
+
+.NOTE > p, .WARNING > p, .TIP > p, .IMPORTANT > p, .CAUTION > p {
+    margin-bottom: 0;
+    padding: 5px 10px;
+}
+
+.NOTE > ul, .WARNING > ul, .TIP > ul, .IMPORTANT > ul, .CAUTION > ul {
+    margin-bottom: 0;
+    padding: 5px 40px;
+}
+
+.NOTE > h5, .WARNING > h5, .TIP > h5, .IMPORTANT > h5, .CAUTION > h5 {
+    padding: 10px 15px;
+    margin-top: 0;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 4px 4px 0 0;
+}
+
+.NOTE h5:before, .WARNING h5:before, .TIP h5:before, .IMPORTANT h5:before, .CAUTION h5:before {
+    display:inline-block;
+    font-family:"Material Icons Sharp" !important;
+    font-size: 24pt;
+    vertical-align: text-bottom;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    margin-right: 5px;
+    font-weight: normal;
+}
+
+.NOTE h5:before {
+  content:"\e88e"
+}
+
+.WARNING h5:before {
+    content:"\e8b2"
+}
+
+.CAUTION h5:before {
+    content:"\e160"
+}
+
+.IMPORTANT h5:before {
+    content:"\e031"
+}
+
+.TIP h5:before {
+    content:"\e925"
+}
+
+.NOTE > h5 {
+    color: rgb(25, 118, 210);
+    border-bottom: 4px solid rgb(25, 118, 210);
+    background-color: rgb(227, 242, 253);
+}
+
+.WARNING > h5 {
+    color: rgb(245, 127, 23);
+    border-bottom: 4px solid rgb(245, 127, 23);
+    background-color: rgb(255, 243, 224);
+}
+
+.IMPORTANT > h5 {
+    color: rgb(180, 20, 20);
+    border-bottom: 4px solid rgb(180, 20, 20);
+    background-color: rgb(255, 235, 238);
+}
+
+.CAUTION > h5 {
+    color: rgb(180, 20, 20);
+    border-bottom: 4px solid rgb(180, 20, 20);
+    background-color: rgb(255, 235, 238);
+}
+
+.TIP > h5{
+    color: rgb(25, 140, 15);
+    border-bottom: 4px solid rgb(25, 140, 15);
+    background-color: rgb(235, 255, 236);
+}
+
 }

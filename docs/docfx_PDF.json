@@ -1,5 +1,5 @@
 {
-  "build": {
+  "pdf": {
     "content": [
       {
         "files": [
@@ -19,30 +19,34 @@
         ]
       }
     ],
-    "markdownEngineName": "markdig",
-    "dest": "_site",
-    "globalMetadataFiles": [],
-    "fileMetadataFiles": [],
-    "template": [
-      "default",
-      "../hr",
-      "../material"
-    ],
-    "postProcessors": [
-      "ExtractSearchIndex"
-    ],
     "globalMetadata": {
       "_appFooter": "<span>Copyright © 2020 Cvikl Dubravko<br>Based on: DocFx Material theme by Oscar Vasquez<br>Generated with <strong>DocFX</strong></span>",
       "_appTitle": "DocFX Material",
+      "_projectTitle": "Gastro v2 SQL - Korisnički priručnik",
       "_enableSearch": "true",
       "_gitContribute": {
         "repo": "https://github.com/dcvikl/docfx-material"
       },
       "_gitUrlPattern": "github"
     },
+    "markdownEngineName": "markdig",
+    "dest": "_site/PDF",
+    "globalMetadataFiles": [],
+    "fileMetadataFiles": [],
+    "postProcessors": [
+      "ExtractSearchIndex"
+    ],
+    "tocTitle": "Sadržaj",
+    "wkhtmltopdf": {
+      "additionalArguments": "--debug-javascript --enable-local-file-access --enable-toc-back-links --header-html ../pdf.hr/header.html --footer-html ../pdf.hr/footer.html --print-media-type --margin-left 25mm"
+    },
     "noLangKeyword": false,
     "keepFileLink": false,
     "cleanupCacheHistory": false,
-    "disableGitFeatures": false
+    "disableGitFeatures": false,
+    "template": [
+      "pdf.default",
+      "../pdf.hr"
+    ]
   }
 }

@@ -61,3 +61,48 @@ non faece numine in cursus; est usus. [Draconem
 sanguine](http://non-parva.com/) inpressa movetur, stantem [precari
 semianimesque contigit](http://poscimusiterumque.org/) mactatur valvis trahens
 in candidus vestes et ad!
+
+# Heading 1
+
+Content goes here ...
+
+## Heading 2
+
+Content goes here ...
+
+### Heading 3
+
+Content goes here ...
+
+#### Heading 4
+
+**Table formating**
+
+|col 1|col 2|
+|---|---|
+|r1c1|r1c2|
+|r2c1|r2c1|
+|r3c1|r3c1|
+
+##### Heading 5
+
+This is a sample style of a menue <samp>Menue=>SubMenue</samp> used in a Sentance, and this is a sample style of a menue with a gyyph icon chevron-right <samp>Menue<span class="material-icons icon-chevron-right" />SubMenue</samp> used in a Sentance.
+
+This id a keyborad <kbd>Space</kbd> or <kbd>F10</kbd>
+
+## Alerts
+
+> [!NOTE]
+> {note content}
+
+> [!WARNING]
+> {warning content}
+
+> [!TIP]
+> {tip content}
+
+> [!IMPORTANT]
+> {Important content}
+
+> [!CAUTION]
+> {Coution content}
